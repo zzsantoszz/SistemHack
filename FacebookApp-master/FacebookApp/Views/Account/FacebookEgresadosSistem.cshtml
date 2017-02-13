@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FacebookApp.Models.FacebookEgresadosViewModel>
+
+@{
+    ViewBag.Title = "Egresados de Sistemas";
+}
+<h2>Egresados de Sistemas</h2>
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <img src="@item.ImageUrl" alt="@item.Name" />
+            </td>
+
+            <td>
+                <a href="@item.Linke" style="text-decoration:none">Perfil</a>
+            </td>
+
+        </tr>
+    }
+
+</table>
