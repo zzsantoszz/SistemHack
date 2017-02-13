@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Postear en Facebook";
+}
+
+<h2>Postear en Facebook</h2>
+
+@using(Html.BeginForm())
+{ 
+    <fieldset>
+        <div class="editor-field">
+            <textarea name="txtMessage"></textarea>
+        </div>
+            <p>
+                <input type="submit" value="Postear" />
+            </p>
+
+    </fieldset>
+}
